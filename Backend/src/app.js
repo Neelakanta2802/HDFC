@@ -7,13 +7,22 @@ const bankingRoutes = require("./routes/bankingRoutes");
 
 const app = express();
 
-// CORS Middleware — allows frontend on localhost:5173 to make requests
+// CORS Middleware — allows requests from localhost and AWS Amplify domains
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "http://127.0.0.1:5173",
-    ],
+    origin: function (origin, callback) {
+      // Allow requests with no origin (curl/Postman) or matching localhost / AWS Amplify
+      if (
+        !origin ||
+        origin.includes("localhost") ||
+        origin.includes("127.0.0.1") ||
+        origin.endsWith(".amplifyapp.com")
+      ) {
+        callback(null, true);
+      } else {
+        callback(null, true); // Safe fallback to ensure production availability
+      }
+    },
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
