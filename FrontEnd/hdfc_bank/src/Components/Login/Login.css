@@ -1,0 +1,51 @@
+.login-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.login-left {
+  flex: 1;
+  background-color: #004b8d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-banner {
+  color: white;
+  text-align: center;
+}
+
+.login-banner h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.login-banner p {
+  font-size: 18px;
+}
+
+.login-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.login-right h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.signup-link {
+  margin-top: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.signup-link a {
+  color: #004b8d;
+  text-decoration: none;
+  font-weight: bold;
+}
