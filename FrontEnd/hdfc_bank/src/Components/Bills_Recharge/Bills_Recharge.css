@@ -1,0 +1,164 @@
+.pay-container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.header h3 {
+  margin: 0;
+}
+
+.search {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.pay-btn {
+  padding: 8px 16px;
+  background-color: #004b8d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  gap: 20px;
+}
+
+.left {
+  flex: 2;
+}
+
+.right {
+  flex: 1;
+}
+
+.pay-card, .quick-card, .quick-link-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-header span {
+  color: #004b8d;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filters button {
+  padding: 6px 14px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.filters button.active {
+  background-color: #004b8d;
+  color: white;
+  border-color: #004b8d;
+}
+
+.bills {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.bill-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 16px;
+  min-width: 180px;
+}
+
+.bill-card h4 {
+  color: #004b8d;
+  margin: 8px 0;
+}
+
+.recharge-btn, .recharge-now {
+  padding: 6px 14px;
+  background-color: #004b8d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.add-card {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #666;
+}
+
+.add-card h4 {
+  color: #004b8d;
+}
+
+.radio-group {
+  display: flex;
+  gap: 16px;
+  margin: 12px 0;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.recharge-row {
+  display: flex;
+  gap: 10px;
+}
+
+.recharge-row input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1;
+}
+
+.link-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.link-item:hover {
+  color: #004b8d;
+}
