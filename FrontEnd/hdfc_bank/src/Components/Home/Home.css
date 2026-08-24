@@ -1,0 +1,45 @@
+.home-page {
+  padding: 20px;
+}
+
+.welcome-bar {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  padding: 12px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+}
+
+.quick-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.quick-actions button {
+  padding: 10px 20px;
+  border: 1px solid #004b8d;
+  background-color: white;
+  color: #004b8d;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.quick-actions button:hover {
+  background-color: #004b8d;
+  color: white;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.offer-card {
+  border-radius: 8px;
+}
