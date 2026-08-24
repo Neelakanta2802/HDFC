@@ -46,8 +46,7 @@ export default function NavBar() {
     localStorage.removeItem("CustomerID");
     localStorage.removeItem("UserName");
     localStorage.removeItem("fullname");
-    navigate("/login");
-    window.location.reload();
+    window.location.href = "/login";
   };
 
   const navItems = [

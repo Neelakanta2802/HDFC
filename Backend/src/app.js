@@ -7,31 +7,21 @@ const bankingRoutes = require("./routes/bankingRoutes");
 
 const app = express();
 
-// Body Parser Middleware
-app.use(express.json());
-
-// CORS Configuration — allows local dev and configurable production client URL
-const allowedOrigins = [
-  "http://localhost:5173",
-  "http://127.0.0.1:5173",
-  process.env.CLIENT_URL,
-].filter(Boolean);
-
+// CORS Middleware — allows frontend on localhost:5173 to make requests
 app.use(
   cors({
-    origin: function (origin, callback) {
-      // Allow requests with no origin (like mobile apps, curl, postman) or matching allowed origins
-      if (!origin || allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV !== "production") {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
+    origin: [
+      "http://localhost:5173",
+      "http://127.0.0.1:5173",
+    ],
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
+// Body Parser Middleware — parse incoming JSON requests
+app.use(express.json());
 
 // Health check endpoint
 app.get("/", (req, res) => {

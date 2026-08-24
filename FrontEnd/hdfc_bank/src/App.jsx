@@ -21,9 +21,15 @@ function App() {
       {!hideNavBar && isLoggedIn && <NavBar />}
 
       <Routes>
-        {/* Public routes */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        {/* Public routes — redirect to dashboard if already logged in */}
+        <Route
+          path="/login"
+          element={isLoggedIn ? <Navigate to="/dashboard" replace /> : <Login />}
+        />
+        <Route
+          path="/signup"
+          element={isLoggedIn ? <Navigate to="/dashboard" replace /> : <Signup />}
+        />
 
         {/* Protected routes — redirect to login if not logged in */}
         <Route

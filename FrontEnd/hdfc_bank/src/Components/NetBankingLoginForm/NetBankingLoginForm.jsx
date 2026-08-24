@@ -58,8 +58,7 @@ export default function NetBankingLoginForm() {
         localStorage.setItem("fullname", response.data.fullname);
       }
 
-      navigate("/dashboard");
-      window.location.reload();
+      window.location.href = "/dashboard";
     } catch (err) {
       if (err.response && err.response.data && err.response.data.message) {
         setError(err.response.data.message);
